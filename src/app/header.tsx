@@ -3,7 +3,7 @@ import { headerLinks } from "@/config/site"
 
 export default function Header() {
   return (
-    <header className="fixed left-0 right-0 top-0 py-4 md:py-6">
+    <header className="fixed left-0 right-0 top-0 z-50 py-4 md:py-6">
       <div className="container text-center">
         <nav>
           <Link href="/" className="mb-4 block font-sofadi text-xl font-medium">
