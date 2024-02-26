@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={monaSans.className}>
+    <html lang="en" className={`${monaSans.className} scroll-smooth`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -75,7 +75,7 @@ export default function RootLayout({
           </div>
         </div>
         <Header />
-        <div className="mt-24">{children}</div>
+        <div className="pb-24">{children}</div>
       </body>
     </html>
   )
