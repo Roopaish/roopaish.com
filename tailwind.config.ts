@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
+import * as defaultTheme from "tailwindcss/defaultTheme"
 
 const config = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -18,8 +18,8 @@ const config = {
       },
     },
     fontFamily: {
-      sans: ["var(--font-inter)"],
-      sofadi: ["var(--font-sofadi)"],
+      sans: ["var(--mona-sans)", ...defaultTheme.fontFamily.sans],
+      serif: [`"Source Serif 4"`, ...defaultTheme.fontFamily.serif],
     },
     extend: {
       colors: {

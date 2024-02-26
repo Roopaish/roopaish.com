@@ -1,46 +1,22 @@
-import Image from "next/image"
+import { Button } from "@/components/ui/button"
 import { getYearsOfExperience } from "@/lib/utils"
 
 export default function Home() {
   return (
-    <main className="container">
-      <div className="relative">
-        <figure className="absolute left-0 right-0 top-0 -mx-8 h-[500px] lg:mx-0  lg:h-full">
-          <Image
-            src="/green/green-woods.jpg"
-            alt="Green woods"
-            height={600}
-            width={1200}
-            className="h-full w-full object-cover"
-          />
-        </figure>
-        <div className="relative h-full w-full">
-          <h1 className="pt-20 text-4xl font-medium lg:pt-32">
-            Rupesh Budhathoki
-          </h1>
-          <p>Fullstack developer with {getYearsOfExperience()} of experience</p>
-          <p className="mt-10">
-            I love to develop web apps and mobile apps using Typescript, React
-            and things built around them.
-            <br />
-            And I love nature.
-          </p>
-          <div className="mb-5 mt-40 text-lg font-medium">
-            Explore blogs written by me
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            {Array.from("*".repeat(5)).map((a, index) => (
-              <div
-                key={index}
-                className="cursor-pointer rounded-[5px] border border-white px-4 py-1 transition-all hover:border-primary hover:bg-green-900"
-              >
-                {" "}
-                Category{index}
-              </div>
-            ))}
-          </div>
+    <>
+      <main className="container pb-[1000px] pt-20">
+        <h1 className="mx-auto mt-10 max-w-4xl text-center font-serif text-5xl md:mt-20 md:text-7xl">
+          Fullstack developer with {getYearsOfExperience()} of experience
+        </h1>
+        <p className="mx-auto mt-10 text-center text-lg md:text-xl">
+          I love developing web and mobile apps using TypeScript, React, Node
+          and things built around them. <br />
+          And I love exploring, both programming stuffs and nature 🌱.
+        </p>
+        <div className="mt-8 text-center">
+          <Button className="rounded-full">View Projects</Button>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
