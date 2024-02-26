@@ -23,14 +23,14 @@ export const featuredProjects = [
   {
     title: "GrihaHub",
     description: "Realstate property listing platform",
-    href: "https://realestate.suvaye.com",
+    href: "https://realstate.suvaye.com",
     img: "/projects/grihahub.png",
     skills: ["Project management"],
   },
   {
     title: "Hyperce",
-    description: "Building e-commerce suite for businesses of all size.",
-    href: "https://hyperce.io/",
+    description: "E-commerce starter with Vendure and Remix.",
+    href: "https://demo.hyperce.io/",
     img: "/projects/hyperce.png",
     skills: ["Frontend Development"],
   },
