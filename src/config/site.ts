@@ -8,3 +8,18 @@ export const headerLinks = [
     link: "/blogs",
   },
 ]
+
+export const footerLinks = [
+  {
+    name: "About",
+    link: "/",
+  },
+  {
+    name: "Blogs",
+    link: "/blogs",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+]

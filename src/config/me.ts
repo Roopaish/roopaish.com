@@ -1,21 +1,25 @@
 import { IconType } from "@/components/icons"
 
-export const contacts = [
+export const contacts: { title: string; href: string; icon: IconType }[] = [
   {
     title: "Email",
     href: "mailto:rupesh39943@gmail.com",
+    icon: "Mail",
   },
   {
     title: "Github",
     href: "https://twitter.com/roopaish_",
+    icon: "Github",
   },
   {
     title: "Twitter",
     href: "https://twitter.com/roopaish_",
+    icon: "Twitter",
   },
   {
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/roopaish/",
+    icon: "Linkedin",
   },
 ]
 
@@ -28,7 +32,7 @@ export const featuredProjects = [
     skills: ["Project management"],
   },
   {
-    title: "Hyperce",
+    title: "Hyperce Demo",
     description: "E-commerce starter with Vendure and Remix.",
     href: "https://demo.hyperce.io/",
     img: "/projects/hyperce.png",
@@ -51,8 +55,7 @@ export const featuredProjects = [
   },
   {
     title: "Aaagaman App",
-    description:
-      "Restaurant discovery as well as food pre-booking services, you can be sure to be on time everywhere while also fulfilling your hunger.",
+    description: "Restaurant discovery & food pre-booking services.",
     href: "https://play.google.com/store/apps/details?id=com.aagaman.bookingapp",
     img: "/projects/aagaman.png",
     skills: ["Mobile App Development"],
@@ -69,7 +72,7 @@ export const featuredProjects = [
   {
     title: "Flutter Roadmap",
     description:
-      "Flutter notes, Quiz App, Meals App, Expense App, Shop App, Great Places App and Chat App",
+      "Flutter notes, Quiz, Recipe, Expense Tracking, Shopping and Chat App",
     href: "https://flutter-roadmap.netlify.app/#/",
     github: "https://github.com/Roopaish/Flutter-RoadMap",
     img: "/projects/gallery/apps.png",
@@ -78,7 +81,7 @@ export const featuredProjects = [
   {
     title: "CSS Roadmap",
     description:
-      "CSS Buttons, Hover Effects, Animations, Emoji, Tooltips, Landing Page, Youtube Clone",
+      "CSS Stuffs, Animations, Emoji, Tooltips, Landing Page, Youtube Clone",
     href: "https://roopaish.github.io/CSS-RoadMap/",
     github: "https://github.com/Roopaish/Flutter-RoadMap",
     img: "/projects/gallery/youtube_redesign.png",
@@ -150,5 +153,9 @@ export const favTechs: { icon: IconType; title: string }[] = [
   {
     title: "Python",
     icon: "python",
+  },
+  {
+    title: "Figma",
+    icon: "Figma",
   },
 ]

@@ -3,6 +3,7 @@ import localFont from "next/font/local"
 
 import "./globals.css"
 
+import Footer from "./footer"
 import Header from "./header"
 
 // TODO: Not working???? Fetch error
@@ -76,6 +77,7 @@ export default function RootLayout({
         </div>
         <Header />
         <div className="pb-24">{children}</div>
+        <Footer />
       </body>
     </html>
   )
