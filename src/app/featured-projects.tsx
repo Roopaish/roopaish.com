@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { Icons } from "@/components/icons"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Button } from "@/components/ui/button"
@@ -42,9 +41,9 @@ export default function FeaturedProjects() {
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium">{title}</p>
                 {github && (
-                  <Link href={github}>
+                  <a href={github} target="_blank">
                     <Icons.Github className="h-4 w-4" />
-                  </Link>
+                  </a>
                 )}
               </div>
             </div>

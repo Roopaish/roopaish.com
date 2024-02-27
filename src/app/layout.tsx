@@ -46,7 +46,7 @@ const monaSans = localFont({
 
 export const metadata: Metadata = {
   title: "Roopaish",
-  description: "Web developer",
+  description: "Full-stack developer",
 }
 
 export default function RootLayout({
@@ -55,7 +55,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${monaSans.className} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${monaSans.className} scroll-pt-28 scroll-smooth`}
+    >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

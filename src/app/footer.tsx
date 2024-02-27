@@ -34,13 +34,23 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-5 pt-8 md:flex-row">
           <div>&copy; {new Date().getFullYear()} Roopaish</div>
+          <div className="text-slate-400">
+            Source code is available on{" "}
+            <a
+              href="https://github.com/Roopaish/roopaish.com"
+              target="_blank"
+              className="text-white underline"
+            >
+              Github
+            </a>
+          </div>
           <div>
             <Image
-              src="/cat.svg"
-              alt="Cat"
-              width={200}
-              height={200}
-              className="h-full w-full max-w-32 object-contain"
+              src="/cats.svg"
+              alt="Cats"
+              width={333}
+              height={100}
+              className="h-full max-h-12 w-full object-contain"
             />
           </div>
         </div>
