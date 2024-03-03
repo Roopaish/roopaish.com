@@ -4,8 +4,8 @@ export const headerLinks = [
     link: "/",
   },
   {
-    name: "Blogs",
-    link: "/blogs",
+    name: "Blog",
+    link: "/blog",
   },
 ]
 
@@ -15,8 +15,8 @@ export const footerLinks = [
     link: "/",
   },
   {
-    name: "Blogs",
-    link: "/blogs",
+    name: "Blog",
+    link: "/blog",
   },
   {
     name: "Contact",

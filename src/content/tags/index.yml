@@ -1,0 +1,11 @@
+- name: Engineering
+  slug: engineering
+
+- name: Frontend
+  slug: frontend
+
+- name: Rants
+  slug: rants
+
+- name: Nature
+  slug: nature

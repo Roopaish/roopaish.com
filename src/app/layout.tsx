@@ -1,4 +1,5 @@
 import { type Metadata } from "next"
+import { Source_Serif_4 } from "next/font/google"
 import localFont from "next/font/local"
 
 import "./globals.css"
@@ -6,12 +7,11 @@ import "./globals.css"
 import Footer from "./footer"
 import Header from "./header"
 
-// TODO: Not working???? Fetch error
-// const sourceSerif = Source_Serif_4({
-//   subsets: ["latin"],
-//   variable: "--font-inter",
-//   display: "swap",
-// })
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-source-serif",
+  display: "swap",
+})
 
 const monaSans = localFont({
   src: [
@@ -41,7 +41,7 @@ const monaSans = localFont({
       style: "normal",
     },
   ],
-  variable: "--mona-sans",
+  variable: "--font-mona-sans",
 })
 
 export const metadata: Metadata = {
@@ -57,21 +57,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monaSans.className} scroll-pt-28 scroll-smooth`}
+      className={`${monaSans.variable} ${sourceSerif.variable} scroll-pt-28 scroll-smooth`}
+      suppressHydrationWarning
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sofadi+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className={`font-sans`}>
         <div className="fixed left-0 top-0 -z-10 h-full w-full">
           <div className="relative h-full w-full bg-slate-950">

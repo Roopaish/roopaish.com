@@ -7,6 +7,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./src/content/**/*.{md,mdx}",
   ],
   prefix: "",
   theme: {
@@ -18,8 +19,8 @@ const config = {
       },
     },
     fontFamily: {
-      sans: ["var(--mona-sans)", ...defaultTheme.fontFamily.sans],
-      serif: [`"Source Serif 4"`, ...defaultTheme.fontFamily.serif],
+      sans: ["var(--font-mona-sans)", ...defaultTheme.fontFamily.sans],
+      serif: ["var(--font-source-serif)", ...defaultTheme.fontFamily.serif],
     },
     extend: {
       colors: {
@@ -88,7 +89,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config
 
 export default config
