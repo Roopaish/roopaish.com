@@ -1,8 +1,5 @@
+import BlogCard from "@/components/blog-card"
 import { blogs } from "@site/content"
-
-async function getAllBlogs(slug: string) {
-  return blogs.find((blog) => blog.slug === slug)
-}
 
 export default async function Blog() {
   return (
@@ -11,7 +8,14 @@ export default async function Blog() {
         <h1 className="font-serif text-3xl font-bold md:text-5xl">
           The Roopaish Blog
         </h1>
-        <div className="mt-10 md:mt-16"></div>
+        <div className="mt-10 grid md:mt-16 md:grid-cols-6">
+          <div className="col-span-6 md:col-span-4">
+            {blogs?.map((b, i) => (
+              <BlogCard key={i} expand={i === 0 ? true : false} {...b} />
+            ))}
+          </div>
+          <div className="col-span-6 md:col-span-2"></div>
+        </div>
       </div>
     </div>
   )

@@ -29,7 +29,7 @@ export default function BlogPage({ params }: Props) {
   if (blog == null) notFound()
 
   return (
-    <article className="container prose-xl mt-24 pt-40">
+    <article className="container prose-2xl mt-24 pt-40">
       <h1>{blog.title}</h1>
       <hr />
       <MDXContent code={blog.content} />

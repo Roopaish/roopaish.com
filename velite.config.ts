@@ -78,7 +78,24 @@ export default defineConfig({
     },
   },
   markdown: {
-    rehypePlugins: [rehypePrettyCode],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          theme: "catppuccin-macchiato",
+        },
+      ],
+    ],
+  },
+  mdx: {
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          theme: "catppuccin-macchiato",
+        },
+      ],
+    ],
   },
   prepare: ({ tags, blogs }) => {
     const docs = blogs.filter(
