@@ -7,7 +7,12 @@
 const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   images: {
-    domains: [],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin())

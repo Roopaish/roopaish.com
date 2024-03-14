@@ -20,7 +20,7 @@ export default function Home() {
           And I love exploring, both programming stuffs and nature 🌱.
         </p>
         <div className="mt-8 flex items-center justify-center space-x-4">
-          <Link href="/blogs">
+          <Link href="/blog">
             <Button className="rounded-full" variant={"outline"}>
               Read Blogs
             </Button>

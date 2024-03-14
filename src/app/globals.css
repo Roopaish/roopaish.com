@@ -40,7 +40,7 @@
 }
 
 [data-rehype-pretty-code-figure] code {
-  @apply overflow-y-auto text-lg !leading-loose md:text-2xl;
+  @apply overflow-y-auto text-lg !leading-loose;
 }
 
 [data-rehype-pretty-code-figure] code[data-line-numbers] {
@@ -72,7 +72,7 @@
 }
 
 [data-rehype-pretty-code-title] {
-  @apply rounded-t bg-zinc-700 px-2 py-3 text-lg font-semibold text-zinc-200 md:text-2xl;
+  @apply rounded-t bg-zinc-700 px-2 py-1 text-lg font-semibold text-zinc-200;
 }
 
 figcaption + pre {

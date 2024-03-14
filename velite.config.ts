@@ -62,7 +62,7 @@ export default defineConfig({
           slug: s.slug("blog"),
           date: s.isodate(),
           updated: s.isodate().optional(),
-          cover: s.image().optional(),
+          cover: s.string().url().optional(),
           video: s.file().optional(),
           description: s.string().max(999).optional(),
           draft: s.boolean().default(false),
@@ -119,6 +119,9 @@ export default defineConfig({
       i.permalink = `/${i.slug}`
     })
 
+    blogs.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    )
     // return false // return false to prevent velite from writing data to disk
   },
 })
