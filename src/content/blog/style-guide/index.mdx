@@ -3,6 +3,11 @@ title: Style Guide
 slug: style-guide
 date: 2024-03-02 12:30:00
 cover: https://www.markdownguide.org/assets/images/markdown-guide-og.jpg
+tags:
+  - snippets
+  - typescript
+categories:
+  - code
 ---
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
@@ -52,6 +57,28 @@ _This will also be italic_\
 **This text will be bold**\
 **This will also be bold**\
 _You **can** combine them_
+
+<Accordion type="single" collapsible className="not-prose w-full">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It comes with default styles that matches the other components&apos;
+      aesthetic.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3">
+    <AccordionTrigger>Is it animated?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It's animated by default, but you can disable it if you prefer.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
 
 #### Preformatted Text
 
@@ -183,7 +210,7 @@ Code can be presented inline, like `<?php bloginfo('stylesheet_url'); ?>`, or wi
 }
 ```
 
-```js
+```js title="app.jsx"
 import React from "react"
 
 import { Wrapper } from "../components"

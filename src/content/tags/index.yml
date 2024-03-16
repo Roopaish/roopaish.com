@@ -1,11 +1,8 @@
-- name: Engineering
-  slug: engineering
+- name: Flutter
+  slug: flutter
 
-- name: Frontend
-  slug: frontend
+- name: Typescript
+  slug: typescript
 
-- name: Rants
-  slug: rants
-
-- name: Nature
-  slug: nature
+- name: Snippets
+  slug: snippets

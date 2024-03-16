@@ -53,6 +53,25 @@ export default defineConfig({
         })
         .transform((data) => ({ ...data, permalink: `/${data.slug}` })),
     },
+    categories: {
+      name: "Category",
+      pattern: "categories/*.yml",
+      schema: s
+        .object({
+          name: s.string().max(20),
+          slug: s.slug("global", ["admin", "login"]),
+          cover: s.image().optional(),
+          description: s.string().max(999).optional(),
+          meta: s
+            .object({
+              title: s.string().max(200).optional(),
+              description: s.string().max(999).optional(),
+            })
+            .optional(),
+          count,
+        })
+        .transform((data) => ({ ...data, permalink: `/${data.slug}` })),
+    },
     blogs: {
       name: "Blog",
       pattern: "blog/**/*.mdx",
@@ -67,7 +86,7 @@ export default defineConfig({
           description: s.string().max(999).optional(),
           draft: s.boolean().default(false),
           featured: s.boolean().default(false),
-          categories: s.array(s.string()).default(["Journal"]),
+          categories: s.array(s.string()).default(["Engineering"]),
           tags: s.array(s.string()).default([]),
           meta: meta,
           metadata: s.metadata(),
@@ -97,10 +116,27 @@ export default defineConfig({
       ],
     ],
   },
-  prepare: ({ tags, blogs }) => {
+  prepare: ({ categories, tags, blogs }) => {
     const docs = blogs.filter(
       (i) => process.env.NODE_ENV !== "production" || !i.draft
     )
+
+    const categoriesFromDoc = Array.from(
+      new Set(docs.map((item) => item.categories).flat())
+    ).filter((i) => categories.find((j) => j.name === i) == null)
+    categories.push(
+      ...categoriesFromDoc.map((name) => ({
+        name,
+        slug: slugify(name),
+        permalink: "",
+        count: { total: 0, blog: 0 },
+      }))
+    )
+    categories.forEach((i) => {
+      i.count.blog = blogs.filter((j) => j.categories.includes(i.name)).length
+      i.count.total = i.count.blog
+      i.permalink = `/${i.slug}`
+    })
 
     const tagsFromDoc = Array.from(
       new Set(docs.map((item) => item.tags).flat())
