@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { favTechs } from "@/config/me"
-import { getYearsOfExperience } from "@/lib/utils"
+import { blogs } from "@site/content"
 import { LucideIcon } from "lucide-react"
 
 import FeaturedProjects from "./featured-projects"
@@ -10,14 +10,25 @@ import FeaturedProjects from "./featured-projects"
 export default function Home() {
   return (
     <>
-      <main className="container mt-24 py-20">
-        <h1 className="mx-auto mt-10 max-w-4xl text-center font-serif text-5xl md:mt-20 md:text-7xl">
-          Fullstack developer with {getYearsOfExperience()} of experience
+      <main className="container py-20 md:mt-24">
+        <Link href={`/blog/${blogs[0].slug}`}>
+          <div className="mx-auto mt-16 max-w-md animate-color-cycle rounded-full px-4 py-[10px] font-serif text-base font-medium leading-none text-black">
+            <span className="line-clamp-1">
+              New blog &#10140; {blogs[0].title}
+            </span>
+          </div>
+        </Link>
+
+        <h1 className="no-bg mx-auto mt-10 max-w-4xl text-center font-serif text-5xl md:text-7xl">
+          {/* Rupesh Budhathoki */}
+          {/* <div className="s sm:-mt-2 [&_code]:overflow-hidden [&_code]:text-[5.6vw] sm:[&_code]:text-4xl lg:[&_code]:text-6xl [&_pre]:!bg-transparent">
+            <MDXContent code={fullstackDevTextAsCode} />
+          </div> */}
+          the full-stack developer
         </h1>
-        <p className="mx-auto mt-10 text-center text-lg md:text-xl">
-          I love developing web and mobile apps using TypeScript, React, Node
-          and things built around them. <br />
-          And I love exploring, both programming stuffs and nature 🌱.
+        <p className="mx-auto mt-10 max-w-4xl text-center text-lg md:text-xl">
+          Hi 👋, I am Rupesh Budhathoki. I can build you a website, or a mobile
+          app.
         </p>
         <div className="mt-8 flex items-center justify-center space-x-4">
           <Link href="/blog">
@@ -30,7 +41,7 @@ export default function Home() {
           </Link>
         </div>
       </main>
-      <div className="relative mt-20 flex overflow-x-hidden">
+      <div className="relative mt-10 flex overflow-x-hidden md:mt-20">
         <h2 className="sr-only">
           Programming Language and Frameworks I love to use
         </h2>

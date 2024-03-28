@@ -159,3 +159,6 @@ export const favTechs: { icon: IconType; title: string }[] = [
     icon: "Figma",
   },
 ]
+
+export const fullstackDevTextAsCode =
+  'const{jsx:e,jsxs:n}=arguments[0];function _createMdxContent(t){const a={code:"code",figure:"figure",pre:"pre",span:"span",...t.components};return e(a.figure,{"data-rehype-pretty-code-figure":"",children:e(a.pre,{style:{backgroundColor:"#24273a",color:"#cad3f5"},tabIndex:"0","data-language":"jsx","data-theme":"catppuccin-macchiato",children:e(a.code,{"data-language":"jsx","data-theme":"catppuccin-macchiato",style:{display:"grid"},children:n(a.span,{"data-line":"",children:[e(a.span,{style:{color:"#8BD5CA"},children:"<"}),e(a.span,{style:{color:"#F5BDE6"},children:"FullstackDeveloper"}),e(a.span,{style:{color:"#8BD5CA"},children:" />"})]})})})})}return{default:function(n={}){const{wrapper:t}=n.components||{};return t?e(t,{...n,children:e(_createMdxContent,{...n})}):_createMdxContent(n)}};'

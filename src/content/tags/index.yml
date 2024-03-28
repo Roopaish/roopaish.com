@@ -6,3 +6,6 @@
 
 - name: Snippets
   slug: snippets
+
+- name: Linux
+  slug: linux

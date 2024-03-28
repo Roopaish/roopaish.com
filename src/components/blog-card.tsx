@@ -9,9 +9,10 @@ export default function BlogCard({
   expand = false,
   title,
   date,
-  excerpt,
   slug,
   cover,
+  description,
+  excerpt,
 }: (typeof blogs)[0] & { expand?: boolean }) {
   return (
     <Link
@@ -47,7 +48,7 @@ export default function BlogCard({
               alt={title}
               width={expand ? 800 : 400}
               height={expand ? 600 : 300}
-              className="h-full w-full object-cover"
+              className="h-full w-full rounded object-cover"
             />
           </AspectRatio>
         </div>
@@ -60,6 +61,7 @@ export default function BlogCard({
       >
         {excerpt}
       </p>
+      <p className="sr-only">{description}</p>
     </Link>
   )
 }

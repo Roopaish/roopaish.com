@@ -81,7 +81,7 @@ export default defineConfig({
           slug: s.slug("blog"),
           date: s.isodate(),
           updated: s.isodate().optional(),
-          cover: s.string().url().optional(),
+          cover: s.string().optional(),
           video: s.file().optional(),
           description: s.string().max(999).optional(),
           draft: s.boolean().default(false),
