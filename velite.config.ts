@@ -155,6 +155,28 @@ export default defineConfig({
       i.permalink = `/${i.slug}`
     })
 
+    blogs.forEach((blog) => {
+      const pattern = /n\(\w\.h[1-7],{[^}]+}\)/g
+
+      let match
+      while ((match = pattern.exec(blog.content)) !== null) {
+        const matchedText = match[0]
+
+        const childrenMatch = matchedText.match(/children:"([^"]+)"/)
+        if (childrenMatch) {
+          const childrenText = childrenMatch[1]
+          const slugifiedChildren = slugify(childrenText)
+
+          const modifiedText = matchedText.replace(
+            /(children:")([^"]+)(")/,
+            `$1$2$3,id:"${slugifiedChildren}"`
+          )
+
+          blog.content = blog.content.replace(matchedText, modifiedText)
+        }
+      }
+    })
+
     blogs.sort(
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     )

@@ -41,11 +41,11 @@ export default function Home() {
           </Link>
         </div>
       </main>
-      <div className="relative mt-10 flex overflow-x-hidden md:mt-20">
+      <div className="group relative mt-10 flex overflow-x-hidden md:mt-20">
         <h2 className="sr-only">
           Programming Language and Frameworks I love to use
         </h2>
-        <div className="flex animate-marquee">
+        <div className="flex animate-marquee group-hover:paused">
           {favTechs.map(({ icon, title }) => {
             const Icon = Icons[icon] as LucideIcon
             return (
@@ -61,7 +61,7 @@ export default function Home() {
             )
           })}
         </div>
-        <div className="absolute top-0 flex animate-marquee2">
+        <div className="absolute top-0 flex animate-marquee2 group-hover:paused">
           {favTechs.map(({ icon, title }) => {
             const Icon = Icons[icon] as LucideIcon
             return (

@@ -95,6 +95,9 @@ const config = {
         marquee2: "marquee2 25s linear infinite",
         "color-cycle": "color-cycle 20s linear infinite;",
       },
+      transitionDuration: {
+        50000: "50s",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

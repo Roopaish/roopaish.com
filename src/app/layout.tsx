@@ -57,8 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monaSans.variable} ${sourceSerif.variable} scroll-pt-28 scroll-smooth`}
-      suppressHydrationWarning
+      className={`${monaSans.variable} ${sourceSerif.variable} scroll-pt-28`}
     >
       <body className={`font-sans`}>
         <div className="fixed left-0 top-0 -z-10 h-full w-full">

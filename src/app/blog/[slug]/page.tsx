@@ -30,7 +30,7 @@ export default function BlogPage({ params }: Props) {
   if (blog == null) notFound()
 
   return (
-    <article className="container prose prose-invert max-w-5xl pt-40 md:mt-24">
+    <article className="container prose prose-invert max-w-5xl overflow-hidden pt-40 md:mt-24">
       <div>
         <h1 className="not-prose mb-2 text-2xl font-bold md:text-4xl">
           {blog.title}

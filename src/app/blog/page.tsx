@@ -1,8 +1,8 @@
 import { Metadata } from "next"
-import Link from "next/link"
 import BlogCard from "@/components/blog-card"
-import { Separator } from "@/components/ui/separator"
 import { blogs, categories } from "@site/content"
+
+import Categories from "./categories"
 
 type Props = { searchParams: { tags?: string | string[]; category?: string } }
 
@@ -18,8 +18,11 @@ function getBlogs({ tags, category }: Props["searchParams"]) {
       }
     })
     .filter((b) => {
-      if (category) {
-        return b.categories.includes(category)
+      const categoryLowerCase = category ? category.toLowerCase() : null
+      const blogCategoriesLowerCase = b.categories.map((c) => c.toLowerCase())
+
+      if (categoryLowerCase) {
+        return blogCategoriesLowerCase.includes(categoryLowerCase)
       } else {
         return true
       }
@@ -74,27 +77,6 @@ export default async function Blog({ searchParams }: Props) {
           </div>
         </div>
       </div>
-    </div>
-  )
-}
-
-function Categories() {
-  return (
-    <div className="w-full">
-      <h3 className="mb-2 text-base font-medium">All Categories</h3>
-      <Separator orientation="horizontal" className="bg-slate-400" />
-      <ul className="mt-4 text-sm text-slate-200">
-        {categories.map((c) => (
-          <li key={c.slug}>
-            <Link
-              href={`/blog?category=${c.slug}`}
-              className="mb-1 block hover:underline"
-            >
-              {c.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
     </div>
   )
 }
