@@ -3,7 +3,7 @@ import { IconType } from "@/components/icons"
 export const contacts: { title: string; href: string; icon: IconType }[] = [
   {
     title: "Email",
-    href: "mailto:rupesh39943@gmail.com",
+    href: "mailto:hi@roopaish.com",
     icon: "Mail",
   },
   {
@@ -21,7 +21,14 @@ export const contacts: { title: string; href: string; icon: IconType }[] = [
     href: "https://www.linkedin.com/in/roopaish/",
     icon: "Linkedin",
   },
+  {
+    title: "Youtube",
+    href: "https://www.youtube.com/@roopaish/",
+    icon: "Youtube",
+  },
 ]
+
+export const email = "hi@roopaish.com"
 
 export const featuredProjects = [
   {

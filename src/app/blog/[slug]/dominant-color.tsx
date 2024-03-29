@@ -22,7 +22,7 @@ export default function DominantColor() {
   return (
     <>
       <div
-        className="absolute left-0 right-0 top-0 m-4 mt-2 h-[40%] rounded-xl transition-colors duration-1000 sm:h-2/4 md:mt-4 md:h-[60%] lg:h-[70%]"
+        className="absolute left-0 right-0 top-0 m-4 mt-2 h-[40%] max-h-[800px] rounded-xl transition-colors duration-1000 sm:h-2/4 md:mt-4 md:h-[60%] lg:h-[70%]"
         style={{
           background:
             color.length === 3

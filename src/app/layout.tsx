@@ -4,6 +4,8 @@ import localFont from "next/font/local"
 
 import "./globals.css"
 
+import { Toaster } from "@/components/ui/sonner"
+
 import Footer from "./footer"
 import Header from "./header"
 
@@ -59,6 +61,7 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${sourceSerif.variable} scroll-pt-28`}
     >
+      <Toaster richColors />
       <body className={`font-sans`}>
         <div className="fixed left-0 top-0 -z-10 h-full w-full">
           <div className="relative h-full w-full bg-slate-950">
@@ -66,7 +69,7 @@ export default function RootLayout({
           </div>
         </div>
         <Header />
-        <div className="pb-24">{children}</div>
+        <div className="min-h-screen pb-24">{children}</div>
         <Footer />
       </body>
     </html>
