@@ -10,7 +10,7 @@ import FeaturedProjects from "./featured-projects"
 export default function Home() {
   return (
     <>
-      <main className="container py-20 md:mt-24">
+      <main className="container mt-10 py-20 md:mt-24">
         <Link href={`/blog/${blogs[0].slug}`}>
           <div className="mx-auto mt-16 max-w-md animate-color-cycle rounded-full px-4 py-[10px] font-serif text-base font-medium leading-none text-black">
             <span className="line-clamp-1">
