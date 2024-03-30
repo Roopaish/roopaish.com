@@ -61,7 +61,7 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${sourceSerif.variable} scroll-pt-28`}
     >
-      <Toaster richColors />
+      <Toaster richColors position="top-right" />
       <body className={`font-sans`}>
         <div className="fixed left-0 top-0 -z-10 h-full w-full">
           <div className="relative h-full w-full bg-slate-950">

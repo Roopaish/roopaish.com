@@ -14,19 +14,28 @@ export default async function Image() {
   return new ImageResponse(
     (
       <div tw="flex flex-col items-center justify-center w-full h-full bg-black text-white">
-        <div tw="font-serif">@Roopaish</div>
-        <div tw="font-serif mx-auto max-w-4xl text-center mt-20 text-7xl">
-          Fullstack developer with 2.5+ of experience
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://avatars.githubusercontent.com/u/54392112?v=4"
+          width={100}
+          height={100}
+          alt="Avatar"
+        />
+        <div tw="fonhttps://nextjs.org/docs/messages/no-img-elementt-serif text-5xl">
+          @roopaish
         </div>
-        <div tw="mx-auto mt-10 text-center text-xl max-w-5xl mx-auto">
-          I love developing web and mobile apps using TypeScript, React, Node
-          and things built around them. And I love exploring, both programming
-          stuffs and nature.
+        <div tw="font-serif mx-auto max-w-4xl text-center mt-10 text-7xl">
+          the full-stack developer
+        </div>
+        <div tw="mx-auto text-center text-2xl max-w-5xl mx-auto">
+          Hi 👋, I am Rupesh Budhathoki. I can build you a website, or a mobile
+          app.
         </div>
       </div>
     ),
     {
       ...size,
+      emoji: "fluent",
     }
   )
 }

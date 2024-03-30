@@ -51,7 +51,7 @@ export default function Home() {
             return (
               <div
                 key={title}
-                className="mx-4 flex w-40 flex-col items-center justify-center overflow-hidden rounded-xl border border-white/[0.2] p-4"
+                className="mx-2 flex w-40 flex-col items-center justify-center overflow-hidden rounded-xl border border-white/[0.2] p-4 md:mx-4"
               >
                 <Icon className="h-10 w-10" />
                 <p className="mt-4 text-sm font-semibold text-slate-300">
@@ -67,7 +67,7 @@ export default function Home() {
             return (
               <div
                 key={title}
-                className="mx-4 flex w-40 flex-col items-center justify-center overflow-hidden rounded-xl border border-white/[0.2] p-4"
+                className="mx-2 flex w-40 flex-col items-center justify-center overflow-hidden rounded-xl border border-white/[0.2] p-4 md:mx-4"
               >
                 <Icon className="h-10 w-10" />
                 <p className="mt-4 text-sm font-semibold text-slate-300">

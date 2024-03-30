@@ -8,7 +8,7 @@ export const contacts: { title: string; href: string; icon: IconType }[] = [
   },
   {
     title: "Github",
-    href: "https://twitter.com/roopaish_",
+    href: "https://github.com/roopaish",
     icon: "Github",
   },
   {

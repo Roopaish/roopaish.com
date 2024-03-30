@@ -8,6 +8,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -52,14 +53,18 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-5 rounded-lg border bg-card p-6 text-card-foreground shadow-sm"
+      >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
+              <FormLabel>Full Name</FormLabel>
               <FormControl>
-                <Input placeholder="Full Name" {...field} />
+                <Input placeholder="Firstname Lastname" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -71,8 +76,9 @@ export default function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Your Email" {...field} />
+                <Input placeholder="you@your-company.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -83,8 +89,12 @@ export default function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
+              <FormLabel>Subject (optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Subject (Optional)" {...field} />
+                <Input
+                  placeholder="I want you to build me a website"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -96,6 +106,7 @@ export default function ContactForm() {
           name="body"
           render={({ field }) => (
             <FormItem>
+              <FormLabel>Message</FormLabel>
               <FormControl>
                 <Textarea
                   rows={10}
