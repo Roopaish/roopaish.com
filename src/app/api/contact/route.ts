@@ -26,41 +26,18 @@ export async function POST(request: Request) {
       auth: { user: process.env.EMAIL, pass: process.env.EMAIL_PASSWORD },
     })
 
-    await transporter.sendMail(
-      {
-        from: `Roopaish.com<${process.env.EMAIL}>`,
-        to: process.env.TO_EMAIL,
-        subject: "Message from roopaish.com website",
-        html: html(data),
-      },
-      function (err, info) {
-        console.log({ err })
-        console.log({ info })
-        if (err) {
-          NextResponse.json(
-            {
-              success: false,
-              title: "Message not sent",
-              message: "Something went wrong!",
-            },
-            { status: 400 }
-          )
-        } else {
-          NextResponse.json({
-            success: true,
-            title: "Message sent",
-            message: "I will get back to you.",
-          })
-        }
-      }
-    )
+    await transporter.sendMail({
+      from: `Roopaish.com<${process.env.EMAIL}>`,
+      to: process.env.TO_EMAIL,
+      subject: "Message from roopaish.com website",
+      html: html(data),
+    })
 
     return NextResponse.json({
       success: true,
       message: "Thank you for reaching out. I will contact you soon.",
     })
   } catch (e) {
-    console.log({ error: e })
     NextResponse.json(
       {
         success: false,
