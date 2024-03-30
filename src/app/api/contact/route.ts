@@ -34,6 +34,8 @@ export async function POST(request: Request) {
         html: html(data),
       },
       function (err, info) {
+        console.log({ err })
+        console.log({ info })
         if (err) {
           NextResponse.json(
             {
@@ -58,6 +60,7 @@ export async function POST(request: Request) {
       message: "Thank you for reaching out. I will contact you soon.",
     })
   } catch (e) {
+    console.log({ error: e })
     NextResponse.json(
       {
         success: false,
